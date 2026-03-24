@@ -4,7 +4,7 @@ import requests
 API_KEY = "60f3b0b3faec46c13e06d3758f6df964"
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
-st.title ("Martin´s Wetter App")
+st.title ("Wetter App")
 
 stadt = st.text_input("Stadt eingeben")
 

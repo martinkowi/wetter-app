@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY wetter.py .
 
-run pip install streamlit requests
+RUN pip install streamlit requests
 
 EXPOSE 8501
 
