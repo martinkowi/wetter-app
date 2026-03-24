@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
+import os
 
-API_KEY = "60f3b0b3faec46c13e06d3758f6df964"
+API_KEY = os.getenv("API_KEY")
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 st.title ("Wetter App")
