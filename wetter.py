@@ -2,8 +2,7 @@ import streamlit as st
 import requests
 import os
 import datetime
-from dotenv import load_dotenv
-load_dotenv()
+import pandas as pd
 
 
 API_KEY = os.getenv("API_KEY")
@@ -51,6 +50,12 @@ if st.button("Wetter abrufen") and stadt:
 			st.info(f"Sonnenaufgang: {sonnenaufgang} Uhr")
 		with col6:
 			st.info(f"Sonnenuntergang: {sonnenuntergang} Uhr")
+
+		st.divider()
+		lat = daten["coord"]["lat"]
+		lon = daten["coord"]["lon"]
+		karte = pd.DataFrame({"lat": [lat], "lon": [lon]})
+		st.map(karte)
 
 	else:
 		st.error("Stadt nicht gefunden")
