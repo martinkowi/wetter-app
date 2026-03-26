@@ -9,6 +9,7 @@ Features
 - Windgeschwindigkeit
 - Luftdruck
 - Sonnenaufgang & Sonnenuntergang
+- Karte
 
 Technologien
 - Python
